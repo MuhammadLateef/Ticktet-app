@@ -1,7 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 
 // mongoose.connect(process.env.MONGO_URI, {
-mongoose.connect('mongodb+srv://admin:mQRGXJLvSYk5QtWZ@cluster0.ko1h2em.mongodb.net/TicketDB', {
+mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })

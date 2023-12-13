@@ -4,14 +4,17 @@ import TicketCard from './(components)/TicketCard';
 
 const getTickets = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Tickets", {
-      cache: "no-store"
+    const res = await fetch("http://localhost:3001/api/Tickets", {
+      cache: "no-store",
     })
+
     return res.json();
   } catch (err) {
     console.log("fail tickets", { err })
   }
 }
+
+
 const Dashboard = async () => {
   const { tickets } = await getTickets();
   const uniqueCategories = [
